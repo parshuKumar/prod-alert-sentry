@@ -1,0 +1,25 @@
+{
+  "name": "prod-alert-sentry",
+  "version": "1.0.0",
+  "description": "Enterprise-grade error monitoring with smart Slack alerts and automatic data format conversion. Used in production for lawyer booking platforms serving 10k+ daily users.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node test.ts",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^18.0.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "@slack/web-api": "^7.13.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
