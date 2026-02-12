@@ -279,11 +279,11 @@ The library has been tested with:
 
 ```ts
 alert.init(
-  process.env.SLACK_BOT_TOKEN!,
+  process.env.SLACK_TOKEN_ID!,
   process.env.NODE_ENV === "production"
     ? "#production-alerts"
     : "#dev-alerts",
-  process.env.SLACK_CHANNEL_ID!
+  process.env.CHANNEL_ID!
 );
 ```
 
