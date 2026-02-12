@@ -31,9 +31,9 @@ yarn add prod-alert-sentry
 import alert from "prod-alert-sentry";
 
 alert.init(
-  process.env.SLACK_BOT_TOKEN!,
-  process.env.SLACK_CHANNEL_NAME!,
-  process.env.SLACK_CHANNEL_ID!
+  process.env.SLACK_TOKEN_ID!,
+  process.env.CHANNEL_NAME!,
+  process.env.CHANNEL_ID!
 );
 ```
 
