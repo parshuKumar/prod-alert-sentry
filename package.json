@@ -1,6 +1,6 @@
 {
   "name": "prod-alert-sentry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enterprise-grade error monitoring with smart Slack alerts and automatic data format conversion. Used in production for lawyer booking platforms serving 10k+ daily users.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
