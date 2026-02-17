@@ -3,9 +3,6 @@ import { WebClient } from '@slack/web-api';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 // ============================================
 // 1. CONFIG STORE
@@ -21,7 +18,7 @@ class ConfigStore {
   private tempDir: string = '';
 
   private constructor() {
-    this.tryAutoInitialize();
+    // Initialization is explicit - users must call alert.init()
   }
 
   static getInstance(): ConfigStore {
@@ -29,20 +26,6 @@ class ConfigStore {
       ConfigStore.instance = new ConfigStore();
     }
     return ConfigStore.instance;
-  }
-
-  private tryAutoInitialize(): void {
-    // REMOVED HARCODED TOKEN - Use environment variables
-    const token = process.env.SLACK_TOKEN_ID;
-    const channelName = process.env.CHANNEL_NAME || "";
-    const channelId = process.env.CHANNEL_ID || ""; 
-
-    if (token && channelName && channelId) {
-      this.initialize(token, channelName, channelId);
-      console.log('✅ error-notifier: Auto-initialized from environment variables');
-    } else {
-      console.log('ℹ️ error-notifier: Not auto-initialized. Call alert.init() to initialize.');
-    }
   }
 
   private initialize(slackToken: string, channelName: string, channelId: string): void {

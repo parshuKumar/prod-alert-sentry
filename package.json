@@ -41,8 +41,7 @@
   "devDependencies": {
     "@types/node": "^18.0.0",
     "typescript": "^5.9.3",
-    "ts-node": "^10.9.2",
-    "dotenv": "^17.2.3"
+    "ts-node": "^10.9.2"
   },
   "files": [
     "dist",
